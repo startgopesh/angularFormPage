@@ -1,0 +1,53 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 offset-md-2">
+			<div class="text-center"><h2>SignUp<b> Form</b></h2></div>
+				<br>
+				<form [formGroup]='signupForm'>
+		           	<div class="form-group">
+		           		<label>First Name</label><br>
+		           		<input type="text" formControlName='fname' placeholder="First Name" class="form-control" >
+		           	</div>
+		        	<div class="form-group">
+		           		<label>Last Name</label><br>
+		           		<input type="text" formControlName='lname' placeholder="Last Name" class="form-control">
+					</div>
+					   
+		      		<!-- <div class="form-group">	
+		           		<label>Date of Birth</label>
+		           		<input type="date" name="dob" class="form-control" id="mydate"  >
+					</div> -->
+		        	<div class="form-group">
+		           		<label>Email</label><br>
+		           		<input type="text" formControlName='emailId' placeholder="Email" class="form-control"  >
+		        	</div>
+		        	<div class="form-group"> 
+		           		<label>Password</label><br>
+		           		<input type="Password" formControlName="userpassword" placeholder="Password" class="form-control"  >
+		        	</div> 
+		           	
+		        	<div class="form-group">
+		           		<label>Mobile Number</label>
+		           		<input type="Number" formControlName="mobile" placeholder="Mobile Number" class="form-control" >
+					</div>
+					   
+		        	<div class="float-right">
+		           		<button type="submit" (click) = "PostData()" class="btn btn-primary" value="Post Data" [disabled]="!signupForm.valid ">Submit</button>
+					</div>
+					<div class="float-left">
+						<button type="button" (click) = "resetForm()" class="btn btn-info">Reset</button>
+					</div>   
+	        	</form>
+		</div>			
+	</div>
+		
+</div>
+
+
+
+
+
+
+
+
+
